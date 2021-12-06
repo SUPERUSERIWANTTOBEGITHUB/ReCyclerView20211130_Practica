@@ -3,29 +3,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content"
+    android:background="@color/purple_500">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12sp"
         android:id="@+id/question"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:text="textQuestion"
         android:textSize="20sp"
+        android:background="@color/purple_500"
         android:padding="5sp"/>
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/answer1"
-        android:text="textAnswer1"
-        android:textSize="20sp"
-        android:padding="5sp"/>
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/answer2"
-        android:text="textAnswer2"
+        android:onClick="onClickFalse"
+        android:padding="5sp"
+        android:text="textAnswer1"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        android:padding="5sp"/>
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/answer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickTrue"
+        android:padding="5sp"
+        android:text="textAnswer2"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 
 </LinearLayout>

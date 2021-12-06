@@ -11,8 +11,8 @@ class DatesViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView){
 
     fun bind(dateQuestions: DatesQuestioons){
         questionTextView.text = "ВОПРОС: ${dateQuestions.question}"
-        answer1TextView.text = "Ответ1: ${dateQuestions.answer1}"
-        answer2TextView.text = "Ответ2: ${dateQuestions.answer2}"
+        answer1TextView.text = " ${dateQuestions.answer1}"
+        answer2TextView.text = " ${dateQuestions.answer2}"
 
 
 
