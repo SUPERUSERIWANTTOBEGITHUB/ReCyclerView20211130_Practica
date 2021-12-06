@@ -4,13 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
     lateinit var userRecyclerView: RecyclerView
-    lateinit var trueAnswer: TextView
-    lateinit var falseAnswer: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,15 +24,9 @@ class MainActivity : AppCompatActivity() {
     userRecyclerView.layoutManager =
         LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
     userRecyclerView.adapter = DatesAdapter(datesQuestionsList)
+    userRecyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
     }
-    fun onClickTrue(view: RecyclerView){
-        trueAnswer = findViewById(R.id.answer2)
-        trueAnswer.text = "Ответ верный"
-    }
-    fun onClickFalse(view: RecyclerView){
-        falseAnswer = findViewById(R.id.answer1)
-        falseAnswer.text = "Ответ неверный"
-    }
+
 }
 // for work recyclerView need: RecyclerView <- Adapter <- ViewHolder <- layout
 // his (RecyclerView) need two parameters:
