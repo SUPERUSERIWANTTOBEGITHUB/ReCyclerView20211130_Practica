@@ -15,10 +15,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val datesQuestionsList: List<DatesQuestioons> = listOf(
-        DatesQuestioons("Сколько будет 2х2", "3", "4"),
+        DatesQuestioons("Сколько будет 2х2", "22", "4"),
+        DatesQuestioons("Как называлось добровольное формирование граждан контролирующее общественный порядок?", "красная сотня", "народная дружина"),
         DatesQuestioons("Какое нарицательное имя было у Русской водки?", "4,12", "3,62"),
         DatesQuestioons("Отчество Леонида Брежнева", "Петрович", "Ильич"),
-        DatesQuestioons("Какой штраф был за безбилетный проезд в общественном транспорте, в СССР, в семидесятые годы", "3 рубля", "5 рублей")
+        DatesQuestioons("Какой штраф был за безбилетный проезд в общественном транспорте, в СССР, в семидесятые годы", "5 рубля", "3 рублей")
         )
     userRecyclerView = findViewById(R.id.user_recycler_view)
     userRecyclerView.layoutManager =
